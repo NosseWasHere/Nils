@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElectroCar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const products = document.querySelectorAll('.interactable');
+      products.forEach(product => {
+        product.addEventListener('click', function() {
+          const url = this.getAttribute('data-url');
+          if (url) {
+            window.location.href = url;
+          }
+        });
+      });
+    });
+  </script>
+  
+<body>
+
+<header>ELECTROCAR AB</header>
+<h1>Elfordon för en grönare värld 🌱</h1>
+
+<div class="text-content scroll-reveal" class="container">
+  <div class="product">
+    <img src="images/Audi-e-tron-GT.jpg">
+    <h1>Audi e-tron GT – Elektrisk kraft med sportig elegans</h1>
+    <h2>Upplev den perfekta kombinationen av prestanda, lyx och hållbarhet med Audi e-tron GT. Denna helt elektriska gran turismo levererar en kraftfull körupplevelse med snabb acceleration, lång räckvidd och imponerande design.</h2>
+    <h2>
+      🚗 0–100 km/h på bara 4,1 sekunder
+    </h2>
+    <h2>
+      🔌 Räckvidd upp till 488 km (WLTP)
+    </h2>
+    <h2>
+      ⚡ Snabbladdning – upp till 80 % på ca 23 minuter
+    </h2>
+    <h2>Interiören präglas av högkvalitativa material, digitala displayer och sportiga detaljer. Med quattro fyrhjulsdrift och avancerade körsystem är e-tron GT både en teknisk mästare och en designikon.</h2>
+</div>
+</div>
+<div class="container">
+  <div class="interactable" data-url="https://mail.google.com/mail/?view=cm&fs=1&to=nils.kastman@elev.ga.lbs.se&su=Intresse för elbil&body=Hej! Jag är intresserad av Audi e-tron GT.">
+    <h2>Kontakta försäljare</h2>
+  </div>
+</div>
+</div>
+<div class="container">
+    <div class="interactable" data-url="index.html">
+      <h2>Tillbaka till startsida</h2>
+  </div>
+</div>
+
+
+</body>
+<footer>
+  <p>&copy; 2025 ElectroCar AB. Alla rättigheter förbehållna.</p>
+  <p>ElectroCar AB är ett svenskt företag som erbjuder elfordon för en grönare framtid.</p>
+  <p>Företagsinformation: Org. nummer: 556789-1234 | Adress: Grönvägen 12, 111 22 Stockholm</p>
+</footer>
+</html>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const revealElements = document.querySelectorAll('.scroll-reveal');
+
+    function revealOnScroll() {
+      const windowHeight = window.innerHeight;
+      revealElements.forEach(el => {
+        const elementTop = el.getBoundingClientRect().top;
+        if (elementTop < windowHeight - 50) {
+          el.classList.add('visible');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll(); // Kör direkt om element redan syns
+  });
+</script>

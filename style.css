@@ -1,0 +1,149 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('images/arctic.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  color: #333;
+}
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scroll-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+h1 {
+  margin: 0;
+  padding: 20px;
+  font-size: 2.5rem;
+  background-color: rgba(63, 150, 135, 0.85);
+  color: #fff;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  color: rgb(102, 0, 255);
+  padding: 25px;
+  font-size: 1.8rem;
+  background-color: rgba(187, 223, 255, 0.95);
+  border-bottom: 3px solid rgba(102, 0, 255, 0.2);
+}
+
+footer {
+  background-color: rgb(219, 249, 249);
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 40px 20px;
+  gap: 30px;
+}
+
+.interactable {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 25px;
+  flex: 1 1 260px;
+  max-width: 300px;
+  border-radius: 20px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.interactable img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+.interactable:hover {
+  transform: scale(1.04);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.25);
+  background-color: aquamarine;
+}
+
+.interactable h2 {
+  font-size: 1.4rem;
+  margin: 15px 0 10px;
+  color: #333;
+}
+
+.interactable p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.product img {
+  width: 700px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.product h2 {
+  font-size: 1.4rem;
+  margin: 15px 0 10px;
+  color: #333;
+}
+
+.product p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  header {
+    font-size: 1.3rem;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
+    padding: 15px;
+  }
+
+  .interactable {
+    flex: 1 1 100%;
+    max-width: 90%;
+  }
+  .product {
+    flex: 1 1 100%;
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    font-size: 1.1rem;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .interactable {
+    padding: 20px;
+  }
+  .product {
+    padding: 20px;
+  }
+}

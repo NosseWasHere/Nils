@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElectroCar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const products = document.querySelectorAll('.interactable');
+      products.forEach(product => {
+        product.addEventListener('click', function() {
+          const url = this.getAttribute('data-url');
+          if (url) {
+            window.location.href = url;
+          }
+        });
+      });
+    });
+  </script>
+  
+<body>
+
+<header>ELECTROCAR AB</header>
+<h1>Elfordon för en grönare värld 🌱</h1>
+
+<div class="container">
+    <div class="interactable" data-url="eqs.html">
+        <img src="images/EQS.jpg" alt="Mercedes Benz EQS">
+        <h2>Mercedes Benz EQS</h2>
+        <p>1,2 miljoner kr</p>
+    </div>
+    <div class="interactable" data-url="lucid.html">
+        <img src="images/lucid_air.jpg" alt="Lucid Air Pure">
+        <h2>Lucid Air Pure</h2>
+        <p>700 000 kr</p>
+    </div>
+    <div class="interactable" data-url="audi.html">
+        <img src="images/Audi-e-tron-GT.jpg" alt="Audi-e-tron-GT">
+        <h2>Audi-e-tron-GT</h2>
+        <p>1,4 miljoner kr</p>
+    </div>
+</div>
+
+
+</body>
+<footer>
+  <p>&copy; 2025 ElectroCar AB. Alla rättigheter förbehållna.</p>
+  <p>ElectroCar AB är ett svenskt företag som erbjuder elfordon för en grönare framtid.</p>
+  <p>Företagsinformation: Org. nummer: 556789-1234 | Adress: Grönvägen 12, 111 22 Stockholm</p>
+</footer>
+
+</html>
