@@ -110,6 +110,11 @@ footer {
     padding: 20px;
   }
 
+  .product>img {
+    
+    width: 200px;
+  }
+
   h1 {
     font-size: 2rem;
     padding: 15px;
@@ -133,6 +138,11 @@ footer {
 
   h1 {
     font-size: 1.6rem;
+  }
+
+  img {
+    height: auto;
+    width: auto;
   }
 
   .container {
